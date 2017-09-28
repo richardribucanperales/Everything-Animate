@@ -1,0 +1,23 @@
+@keyframes spinning{
+  0%{transform:rotate(0deg);}
+  20%{transform:rotate(72deg);}
+  40%{transform:rotate(144deg);}
+  60%{transform:rotate(216deg);}
+  80%{transform:rotate(288deg);}
+  100%{transform:rotate(360deg);}
+}
+@keyframes skew{
+  0%,50%,100%{transform:skew(1deg, 35deg);}
+  25%,75%{transform: skew(35deg, 1deg);}
+}
+#rotate{
+  animation:spinning .1s infinite;
+  background-color:red;
+  font-size:20px;
+}
+#skew{
+  animation:skew 3s infinite;
+}
+#all{
+
+}
