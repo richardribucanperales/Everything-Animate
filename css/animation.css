@@ -1,23 +1,52 @@
-@keyframes spinning{
-  0%{transform:rotate(0deg);}
-  20%{transform:rotate(72deg);}
-  40%{transform:rotate(144deg);}
-  60%{transform:rotate(216deg);}
-  80%{transform:rotate(288deg);}
-  100%{transform:rotate(360deg);}
-}
-@keyframes skew{
-  0%,50%,100%{transform:skew(1deg, 35deg);}
-  25%,75%{transform: skew(35deg, 1deg);}
+@keyframes animate{
+  0%{
+    transform:rotate(0deg);
+    background-color:red;
+    margin-left:0%;
+  }
+  20%{
+    transform:rotate(72deg);
+    background-color:blue;
+  }
+  40%{
+    transform:rotate(144deg);
+    background-color:yellow;
+  }
+  60%{
+    transform:rotate(216deg);
+    background-color:pink;
+  }
+  80%{
+    transform:rotate(288deg);
+    background-color:lime;
+  }
+  99%{
+    transform:rotate(360deg);
+    background-color:orange;
+  }
+  100%{margin-left:80%;}
 }
 #rotate{
-  animation:spinning .1s infinite;
+  transform:rotate(25deg);
   background-color:red;
   font-size:20px;
 }
 #skew{
-  animation:skew 3s infinite;
+  transform:skew(1deg,35deg);
+  background-color:red;
 }
 #all{
-
+  transform:rotate(25deg) skew(1deg,35deg);
+  background-color:red;
+}
+#matrix{
+  transform:matrix(1, -0.3, 1, 1, -4, 5);
+}
+#animate{
+  animation: animate 10s infinite;
+}
+#pseudo:hover{
+  width:500px;
+  height:500px;
+  background-color:red;
 }
